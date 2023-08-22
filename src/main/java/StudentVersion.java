@@ -1,10 +1,8 @@
-import java.util.Scanner;
+/**import java.util.Scanner;
 
-public class DiagnoseCodeForBugs {
-
+public class StudentVersion {
     public static void main(String[] args) {
         boolean run = true;
-
         String choice;
 
         do {
@@ -16,7 +14,7 @@ public class DiagnoseCodeForBugs {
                 double x = getNumber(1);
                 double y = getNumber(2);
                 double total = sumMethod(x,y);
-                display(total);
+                display(totl);
                 run = checkFinish();
             }
             else if (choice.equals("2")){
@@ -29,11 +27,11 @@ public class DiagnoseCodeForBugs {
             else if (choice.equals("3")){
                 double x = getNumber(1);
                 double y = getNumber(2);
-                double total = (x*y);
+                double total = multiplymethod(x,y);
                 display(total);
                 run = checkFinish();
             }
-            else if  (choice.equals("4")){
+            else if (choice.equals("4")){
                 double x = getNumber(1);
                 double y = getNumber(2);
                 double total = divideMethod(x,y);
@@ -57,7 +55,7 @@ public class DiagnoseCodeForBugs {
             }
             Scanner reader = new Scanner(System.in);
             try {
-                double x = reader.nextDouble();
+                double x = reader.nextLine();
                 return x;
             } catch (Exception e){
                 System.out.println("Number not recognised, please try again.");
@@ -94,7 +92,7 @@ public class DiagnoseCodeForBugs {
 
     public static double sumMethod(double n, double m){
         System.out.println("When adding the numbers");
-        return (n + m);
+        return (n * m);
     }
 
     public static double subtractMethod(double n, double m){
@@ -116,3 +114,4 @@ public class DiagnoseCodeForBugs {
         System.out.println("The answer is: " + sum);
     }
 }
+*/
