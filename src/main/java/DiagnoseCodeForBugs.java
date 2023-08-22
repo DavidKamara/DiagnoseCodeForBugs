@@ -15,8 +15,8 @@ public class DiagnoseCodeForBugs {
             else if (choice.equals("1")){
                 double x = getNumber(1);
                 double y = getNumber(2);
-                double total = sumMethod(x,y);
-                display(total);
+                double total = sumMethod(x,y);  //total needs to be set as double and not an int - variable watching
+                display(total); // total was wrongly spelt - variable watching
                 run = checkFinish();
             }
             else if (choice.equals("2")){
@@ -29,7 +29,7 @@ public class DiagnoseCodeForBugs {
             else if (choice.equals("3")){
                 double x = getNumber(1);
                 double y = getNumber(2);
-                double total = (x*y);
+                double total = multiplyMethod(x,y); //multiplyMethod should be in camel case
                 display(total);
                 run = checkFinish();
             }
@@ -51,13 +51,13 @@ public class DiagnoseCodeForBugs {
         boolean numberWrong = true;
         while (numberWrong) {
             if (count == 1) {
-                System.out.print("Enter 1st number: ");
+                System.out.println("Enter 1st number: "); // println  - correct lack of consistency
             } else {
                 System.out.println("Enter 2nd number: ");
             }
             Scanner reader = new Scanner(System.in);
             try {
-                double x = reader.nextDouble();
+                double x = reader.nextDouble(); // nextLine changed to nextDouble data type error - variable watching
                 return x;
             } catch (Exception e){
                 System.out.println("Number not recognised, please try again.");
@@ -94,7 +94,7 @@ public class DiagnoseCodeForBugs {
 
     public static double sumMethod(double n, double m){
         System.out.println("When adding the numbers");
-        return (n + m);
+        return (n + m); // Logic error - should be + instead of *
     }
 
     public static double subtractMethod(double n, double m){
@@ -113,6 +113,6 @@ public class DiagnoseCodeForBugs {
     }
 
     public static void display(double sum){
-        System.out.println("The answer is: " + sum);
+        System.out.println("The answer is: " + sum); // missing semi-colon
     }
 }
